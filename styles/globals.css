@@ -38,4 +38,20 @@ html {
     .text_spacing {
         @apply mb-[30px];
     }
+
+    .border_soft {
+        border-color: rgba(255, 255, 255, 0.08);
+    }
+}
+
+.team_slider_wrapper .swiper-pagination-bullet {
+    background: rgba(255, 255, 255, 0.8) !important;
+    height: 6.5px !important;
+    transition: 0.4s ease;
+}
+
+.team_slider_wrapper .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #fff !important;
+    width: 25px !important;
+    border-radius: 10px !important;
 }

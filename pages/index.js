@@ -8,6 +8,7 @@ import NftSection from "../components/NftSection";
 import HeroSection from "../components/HeroSection";
 import GameSection from "../components/GameSection";
 import MarketPlaceSection from "../components/MarketPlaceSection";
+import TeamSection from "../components/TeamSection";
 
 // function Home() {
 //   const router = useRouter()
@@ -53,6 +54,7 @@ function Home() {
       <NftSection />
       <GameSection />
       <MarketPlaceSection />
+      <TeamSection />
     </>
   )
 }
