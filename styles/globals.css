@@ -7,7 +7,7 @@ html {
     @apply bg-dark-blue;
 }
 
-@layer utilities {
+@layer components {
     .heading_sm {
         text-shadow: 4px 4px 0 #c39e53;
         @apply text-white text-[40px] leading-[44px] uppercase font-scouser-ste font-medium;
@@ -41,6 +41,10 @@ html {
 
     .border_soft {
         border-color: rgba(255, 255, 255, 0.08);
+    }
+
+    .social_link {
+        @apply px-0 py-1 relative before:absolute before:bottom-0 before:-left-full before:w-full before:h-[0.5px] before:bg-white before:duration-150 group-hover:before:left-0 overflow-hidden;
     }
 }
 

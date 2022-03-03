@@ -9,6 +9,8 @@ import HeroSection from "../components/HeroSection";
 import GameSection from "../components/GameSection";
 import MarketPlaceSection from "../components/MarketPlaceSection";
 import TeamSection from "../components/TeamSection";
+import SubscribeNewsLetterSection from "../components/SubscribeNewsLetterSection";
+import Footer from "../components/Footer";
 
 // function Home() {
 //   const router = useRouter()
@@ -55,6 +57,8 @@ function Home() {
       <GameSection />
       <MarketPlaceSection />
       <TeamSection />
+      <SubscribeNewsLetterSection />
+      <Footer />
     </>
   )
 }
