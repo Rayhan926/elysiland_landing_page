@@ -1,16 +1,41 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,
+html {
+    @apply bg-dark-blue;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@layer utilities {
+    .heading_sm {
+        text-shadow: 4px 4px 0 #c39e53;
+        @apply text-white text-[40px] leading-[44px] uppercase font-scouser-ste font-medium;
+    }
+    .heading_md {
+        text-shadow: 4px 4px 0 #c39e53;
+        @apply text-white text-[60px] leading-[66px] uppercase font-scouser-ste font-medium;
+    }
+    .heading_lg {
+        text-shadow: 4px 4px 0 #c39e53;
+        @apply text-white text-[92px] leading-[101px] uppercase font-scouser-ste font-medium;
+    }
+    .paragraph_sm {
+        text-shadow: 4px 4px 0 #000;
+        @apply text-white text-[28px] leading-[45px] uppercase font-praebrg font-normal;
+    }
+    .nav_link {
+        text-shadow: 4px 4px 0 #000;
+        @apply text-white text-[25px] leading-[25px] uppercase font-praebrg font-normal px-[20px] py-3 block;
+    }
+    .section_py {
+        @apply py-[150px];
+    }
 
-* {
-  box-sizing: border-box;
+    .container {
+        @apply mx-auto max-w-full px-5 md:px-0 lg:max-w-[1024px];
+    }
+    .text_spacing {
+        @apply mb-[30px];
+    }
 }
