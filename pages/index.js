@@ -11,6 +11,8 @@ import MarketPlaceSection from "../components/MarketPlaceSection";
 import TeamSection from "../components/TeamSection";
 import SubscribeNewsLetterSection from "../components/SubscribeNewsLetterSection";
 import Footer from "../components/Footer";
+import ScrollAnimationSection from "../components/ScrollAnimationSection";
+import RoadmapSection from "../components/RoadmapSection";
 
 // function Home() {
 //   const router = useRouter()
@@ -55,8 +57,10 @@ function Home() {
       <HeroSection />
       <NftSection />
       <GameSection />
+      <ScrollAnimationSection />
       <MarketPlaceSection />
       <TeamSection />
+      <RoadmapSection />
       <SubscribeNewsLetterSection />
       <Footer />
     </>

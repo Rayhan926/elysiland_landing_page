@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "gsap": "^3.9.1",
     "next": "12.1.0",
     "next-translate": "^1.3.4",
     "react": "17.0.2",
