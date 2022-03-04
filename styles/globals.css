@@ -4,39 +4,40 @@
 
 body,
 html {
-    @apply bg-dark-blue;
+    @apply bg-dark-blue overflow-x-hidden;
 }
 
 @layer components {
     .heading_sm {
-        text-shadow: 4px 4px 0 #c39e53;
-        @apply text-white text-[40px] leading-[44px] uppercase font-scouser-ste font-medium;
+        @apply text_shadow_sm md:text_shadow_lg text-white text-[36px] leading-[40px] md:text-[40px] md:leading-[44px] uppercase font-scouser-ste font-medium;
     }
     .heading_md {
-        text-shadow: 4px 4px 0 #c39e53;
-        @apply text-white text-[60px] leading-[66px] uppercase font-scouser-ste font-medium;
+        @apply text_shadow_sm md:text_shadow_lg text-white text-[32px] leading-[35px] md:text-[60px] md:leading-[66px] uppercase font-scouser-ste font-medium;
     }
     .heading_lg {
-        text-shadow: 4px 4px 0 #c39e53;
-        @apply text-white text-[92px] leading-[101px] uppercase font-scouser-ste font-medium;
+        @apply text_shadow_sm md:text_shadow_lg text-white text-[36px] leading-[40px] md:text-[92px] md:leading-[101px] uppercase font-scouser-ste font-medium;
     }
     .paragraph_sm {
         text-shadow: 4px 4px 0 #000;
-        @apply text-white text-[28px] leading-[45px] uppercase font-praebrg font-normal;
+        @apply text-white text-[19px] leading-[31px] md:text-[28px] md:leading-[45px] uppercase font-praebrg font-normal;
     }
     .nav_link {
         text-shadow: 4px 4px 0 #000;
-        @apply text-white text-[25px] leading-[25px] uppercase font-praebrg font-normal px-[20px] py-3 block;
+        @apply text-white text-[28px] leading-[45px] md:text-[25px] md:leading-[25px] uppercase font-praebrg font-normal px-[20px] py-1.5 md:py-3 block;
+    }
+    .footer_nav_link {
+        text-shadow: 4px 4px 0 #000;
+        @apply text-white text-[21px] leading-[21px] md:text-[25px] md:leading-[25px] uppercase font-praebrg font-normal px-[20px] py-1.5 md:py-3 block;
     }
     .section_py {
-        @apply py-[150px];
+        @apply py-[50px] md:py-[150px];
     }
 
     .container {
         @apply mx-auto max-w-full px-5 md:px-0 lg:max-w-[1024px];
     }
     .text_spacing {
-        @apply mb-[30px];
+        @apply mb-[20px] md:mb-[30px];
     }
 
     .border_soft {
@@ -58,4 +59,30 @@ html {
     background: #fff !important;
     width: 25px !important;
     border-radius: 10px !important;
+}
+
+@layer utilities {
+    .hero_bg_desktop {
+        background-image: url('../public/img/main_background_5npc.png');
+        background-position: center 30%;
+        background-size: cover;
+    }
+
+    .text_shadow_sm {
+        text-shadow: 2.5px 2.5px 0 #c39e53;
+    }
+    .text_shadow_lg {
+        text-shadow: 4px 4px 0 #c39e53;
+    }
+    .box_shadow_sm {
+        box-shadow: 2.5px 2.5px #c39e53;
+    }
+    .box_shadow_lg {
+        box-shadow: 4px 4px #c39e53;
+    }
+}
+
+.swiper-button-disabled {
+    opacity: 0.5 !important;
+    transition: 0.5s ease;
 }

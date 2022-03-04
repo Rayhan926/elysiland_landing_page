@@ -98,8 +98,8 @@ function NftSection() {
             </section>
             <section>
                 {/* Nft Cards Grid --Start-- */}
-                <div className="container">
-                    <div className="grid grid-cols-1 md:grid-cols-4">
+                <div className="container !px-0">
+                    <div className="grid grid-cols-2 md:grid-cols-4">
                         {nftCard.map((card, index) => (
                             <NftCard key={index} {...card} />
                         ))}

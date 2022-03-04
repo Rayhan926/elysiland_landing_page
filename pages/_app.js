@@ -1,4 +1,5 @@
 import 'swiper/css';
+import "swiper/css/bundle";
 import 'swiper/css/pagination';
 import '../styles/globals.css'
 import { gsap } from 'gsap';

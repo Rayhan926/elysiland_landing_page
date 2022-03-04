@@ -42,29 +42,42 @@ const teams = [
 
 function TeamSection() {
     return (
-        <section className="grid grid-cols-2 border-t border-b border_soft">
-            <div className="px-[9vw] border-r border_soft py-[120px] grid items-center">
-                <h2 className="heading_md" >Team</h2>
+        <section className="grid grid-cols-1 md:grid-cols-2 border-t border-b border_soft">
+            <div className="md:px-[9vw] border-r border_soft py-[120px] md:grid md:items-center">
+                <h2 className="heading_md text-center md:text-left" >Team</h2>
             </div>
-            <div className="py-[120px] ml-[70px] pr-10 team_slider_wrapper" >
-                <Swiper
-                    spaceBetween={35}
-                    slidesPerView={1.4}
-                    modules={[Pagination]}
-                    pagination={{
-                        clickable: true,
-                        el: '.team_slider_pagination',
-                        renderBullet: function (index, className) {
-                            return `<span class="dot swiper-pagination-bullet"></span>`;
-                        },
-                    }}
+            <div className="pt-0 pb-10 md:py-[120px] md:ml-[70px] md:pr-10 team_slider_wrapper" >
+                <div>
+                    <Swiper
+                        spaceBetween={35}
+                        slidesPerView={1.4}
+                        modules={[Pagination]}
+                        pagination={{
+                            clickable: true,
+                            el: '.team_slider_pagination',
+                            renderBullet: function (index, className) {
+                                return `<span class="dot swiper-pagination-bullet"></span>`;
+                            },
+                        }}
+                        breakpoints={{
+                            0: {
+                                slidesPerView: 1.25,
+                                spaceBetween: 15
+                            },
+                            750: {
+                                slidesPerView: 1.4,
+                                spaceBetween: 35
+                            },
+
+                        }}
 
 
-                >
-                    {teams.map((team, index) => (
-                        <SwiperSlide key={index}><TeamCard {...team} /></SwiperSlide>
-                    ))}
-                </Swiper>
+                    >
+                        {teams.map((team, index) => (
+                            <SwiperSlide key={index}><TeamCard {...team} /></SwiperSlide>
+                        ))}
+                    </Swiper>
+                </div>
 
                 <div className="team_slider_pagination flex items-center justify-center mt-8"></div>
             </div>

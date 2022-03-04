@@ -2,13 +2,14 @@ import Button from "./Button"
 
 function HeroSection() {
     return (
-        <section className="min-h-[110vh] flex flex-col items-end justify-end bg-dark-blue px-[9vw] pb-[22vh] bg-no-repeat" style={{
-            backgroundImage: "url('/img/main_background_5npc.png')",
-            backgroundSize: 'cover',
-            backgroundPosition: 'center 30%'
-        }} >
-            <h1 className="heading_lg mb-[30px]">ONWARDS TO GLORY</h1>
-            <Button />
+        <section className="h-[100vh] md:min-h-[110vh] flex flex-col md:items-end md:justify-end bg-dark-blue md:px-[9vw] pb-[23vh] bg-no-repeat hero_bg_mobile md:hero_bg_desktop relative" >
+
+            <img src="/img/main_background_5npc_mobile_640x.webp" className="absolute top-0 left-0 w-full h-full object-cover md:hidden block" alt="" />
+
+            <div className="relative z-[5] flex flex-col items-center md:items-end mt-[28vh] md:mt-0">
+                <h1 className="heading_lg text_spacing">ONWARDS TO GLORY</h1>
+                <Button />
+            </div>
         </section>
     )
 }

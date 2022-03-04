@@ -1,7 +1,6 @@
 // import Link from "next/link"
 // import { useRouter } from "next/router"
 // import useTranslation from 'next-translate/useTranslation'
-import Button from "../components/Button"
 
 import Header from "../components/Header";
 import NftSection from "../components/NftSection";
@@ -13,6 +12,10 @@ import SubscribeNewsLetterSection from "../components/SubscribeNewsLetterSection
 import Footer from "../components/Footer";
 import ScrollAnimationSection from "../components/ScrollAnimationSection";
 import RoadmapSection from "../components/RoadmapSection";
+import ScrollAnimationSectionMobile from "../components/ScrollAnimationSectionMobile";
+import RoadMapMobile from "../components/RoadMapMobile";
+import { useMediaQuery } from 'react-responsive'
+import Head from "next/head";
 
 // function Home() {
 //   const router = useRouter()
@@ -49,18 +52,24 @@ import RoadmapSection from "../components/RoadmapSection";
 
 // export default Home
 
-
 function Home() {
+  const isDesktopOrLaptop = useMediaQuery({
+    query: '(min-width: 1224px)'
+  })
+
   return (
     <>
+      <Head>
+        <title>Elysiland Limited</title>
+      </Head>
       <Header />
       <HeroSection />
       <NftSection />
       <GameSection />
-      <ScrollAnimationSection />
+      {!isDesktopOrLaptop ? <ScrollAnimationSectionMobile /> : <ScrollAnimationSection />}
       <MarketPlaceSection />
       <TeamSection />
-      <RoadmapSection />
+      {!isDesktopOrLaptop ? <RoadMapMobile /> : <RoadmapSection />}
       <SubscribeNewsLetterSection />
       <Footer />
     </>

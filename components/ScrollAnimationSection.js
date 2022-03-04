@@ -55,7 +55,7 @@ function ScrollAnimationSection() {
     }, [])
 
     return (
-        <section className="grid grid-cols-2 border-t border-b border_soft" ref={scroll_animation_section_ref}>
+        <section className="grid-cols-2 border-t border-b border_soft hidden md:grid" ref={scroll_animation_section_ref}>
 
             {/* Text Box Container --Start-- */}
             <div className="animaton_text_boxs_wrapper" >
