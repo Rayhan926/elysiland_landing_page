@@ -1,3 +1,12 @@
 {
-    "greet": "Hello World Chines"
+    "home": "家",
+    "game": "遊戲",
+    "whitepaper": "白皮書",
+    "marketplace": "市場",
+    "team": "團隊",
+    "roadmap": "路線圖",
+    "contact": "接觸",
+    "chinese": "中國人",
+    "english": "英語",
+    "hero_title": "走向榮耀"
 }

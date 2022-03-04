@@ -87,7 +87,7 @@ const nftCard = [
 function NftSection() {
     return (
         <>
-            <section className="section_py">
+            <section className="section_py" id="nft">
                 <div className="container text-center flex flex-col items-center">
                     <h2 className="heading_sm text_spacing">NFT</h2>
                     <p className="paragraph_sm">All Heroes are NFTs and players can mint their favourite heroes based on a pre-defined rarity percentage.</p>

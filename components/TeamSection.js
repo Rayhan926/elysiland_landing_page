@@ -42,7 +42,7 @@ const teams = [
 
 function TeamSection() {
     return (
-        <section className="grid grid-cols-1 md:grid-cols-2 border-t border-b border_soft">
+        <section className="grid grid-cols-1 md:grid-cols-2 border-t border-b border_soft" id="team">
             <div className="md:px-[9vw] border-r border_soft py-[120px] md:grid md:items-center">
                 <h2 className="heading_md text-center md:text-left" >Team</h2>
             </div>

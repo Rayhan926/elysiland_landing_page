@@ -114,16 +114,16 @@ function RoadmapSection() {
                 start: 'top 30%',
                 end: 'bottom top',
                 onEnter: () => timeline.play(),
-                onEnterBack: () => timeline.play(),
-                onLeave: () => timeline.reverse('0.2'),
-                onLeaveBack: () => timeline.reverse('0.2'),
+                // onEnterBack: () => timeline.play(),
+                // onLeave: () => timeline.reverse('0.2'),
+                // onLeaveBack: () => timeline.reverse('0.2'),
                 // markers: true
             }
         })
     }, [])
 
     return (
-        <section className="section_py roadmap_section">
+        <section className="section_py roadmap_section" id="roadmap">
             <h2 className="heading_md text-center">Roadmap</h2>
 
             <div className="md:w-[95%] mx-auto pt-[3%]" >

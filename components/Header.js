@@ -4,8 +4,12 @@ import { useEffect, useState } from "react";
 import { AiFillFacebook } from "react-icons/ai";
 import { BsTwitter } from "react-icons/bs";
 import { IoMdClose } from 'react-icons/io';
+import LanguageSwitcher from "./LanguageSwitcher";
+import useTranslation from 'next-translate/useTranslation'
 
 function Header() {
+
+    const { t } = useTranslation()
 
     const [isOpenSidebar, setIsOpenSidebar] = useState(false)
 
@@ -66,7 +70,7 @@ function Header() {
                 </div>
                 {/* Hamburger Icon --End-- */}
 
-                <nav className={`fixed top-0 left-0 w-full h-screen md:h-auto duration-200 ${isOpenSidebar ? "bg-black/90 pointer-events-auto opacity-100" : 'pointer-events-none opacity-0 md:opacity-100'} md:static md:bg-transparent`} >
+                <nav className={`fixed top-0 left-0 w-full h-screen md:h-auto duration-200 ${isOpenSidebar ? "bg-black/90 pointer-events-auto opacity-100" : 'pointer-events-none opacity-0 md:pointer-events-auto md:opacity-100'} md:static md:bg-transparent`} >
                     <ul className={`flex flex-col md:flex-row w-[90%] md:w-full px-1 bg-dark-blue md:bg-transparent ml-auto md:ml-[unset] h-full md:h-auto ${!isOpenSidebar ? "translate-x-full md:translate-x-0" : 'translate-x-0'} duration-200`}>
 
 
@@ -78,60 +82,63 @@ function Header() {
                         </li>
 
                         <li>
-                            <Link href="#">
+                            <Link href="/">
                                 <a className="nav_link">
-                                    Home
+                                    {t('common:home')}
                                 </a>
                             </Link>
                         </li>
                         <li>
-                            <Link href="#">
+                            <Link href="#nft">
                                 <a className="nav_link">
                                     NFT
                                 </a>
                             </Link>
                         </li>
                         <li>
-                            <Link href="#">
+                            <Link href="#game">
                                 <a className="nav_link">
-                                    Game
+                                    {t('common:game')}
                                 </a>
                             </Link>
                         </li>
                         <li>
-                            <Link href="#">
+
+                            <a className="nav_link" href="https://elysiland.gitbook.io/" target="_blank" rel="noreferrer">
+                                {t('common:whitepaper')}
+                            </a>
+                        </li>
+                        <li>
+                            <Link href="#marketplace">
                                 <a className="nav_link">
-                                    Whitepaper
+                                    {t('common:marketplace')}
                                 </a>
                             </Link>
                         </li>
                         <li>
-                            <Link href="#">
+                            <Link href="#team">
                                 <a className="nav_link">
-                                    Marketplace
+                                    {t('common:team')}
                                 </a>
                             </Link>
                         </li>
                         <li>
-                            <Link href="#">
+                            <Link href="#roadmap">
                                 <a className="nav_link">
-                                    Team
+                                    {t('common:roadmap')}
                                 </a>
                             </Link>
                         </li>
                         <li>
-                            <Link href="#">
+                            <Link href="/contact">
                                 <a className="nav_link">
-                                    Roadmap
+                                    {t('common:contact')}
                                 </a>
                             </Link>
                         </li>
+
                         <li>
-                            <Link href="#">
-                                <a className="nav_link">
-                                    Contact
-                                </a>
-                            </Link>
+                            <LanguageSwitcher />
                         </li>
 
                         <li className="md:hidden px-5 w-full mt-auto">

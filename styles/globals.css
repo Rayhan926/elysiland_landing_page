@@ -5,6 +5,7 @@
 body,
 html {
     @apply bg-dark-blue overflow-x-hidden;
+    scroll-behavior: smooth;
 }
 
 @layer components {
@@ -45,7 +46,7 @@ html {
     }
 
     .social_link {
-        @apply px-0 py-1 relative before:absolute before:bottom-0 before:-left-full before:w-full before:h-[0.5px] before:bg-white before:duration-150 group-hover:before:left-0 overflow-hidden;
+        @apply px-0 py-1 relative before:absolute before:bottom-[1px] before:-left-full before:w-full before:h-[0.5px] before:bg-white before:duration-150 group-hover:before:left-0 overflow-hidden;
     }
 }
 

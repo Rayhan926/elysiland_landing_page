@@ -16,6 +16,7 @@ import ScrollAnimationSectionMobile from "../components/ScrollAnimationSectionMo
 import RoadMapMobile from "../components/RoadMapMobile";
 import { useMediaQuery } from 'react-responsive'
 import Head from "next/head";
+import { useEffect, useState } from "react";
 
 // function Home() {
 //   const router = useRouter()
@@ -53,9 +54,15 @@ import Head from "next/head";
 // export default Home
 
 function Home() {
+
+  const [isDesktop, setIsDesktop] = useState(false)
   const isDesktopOrLaptop = useMediaQuery({
-    query: '(min-width: 1224px)'
+    query: '(min-width: 768px)'
   })
+
+  useEffect(() => {
+    setIsDesktop(isDesktopOrLaptop)
+  }, [isDesktopOrLaptop])
 
   return (
     <>
@@ -66,10 +73,10 @@ function Home() {
       <HeroSection />
       <NftSection />
       <GameSection />
-      {!isDesktopOrLaptop ? <ScrollAnimationSectionMobile /> : <ScrollAnimationSection />}
+      {isDesktop ? <ScrollAnimationSection /> : <ScrollAnimationSectionMobile />}
       <MarketPlaceSection />
       <TeamSection />
-      {!isDesktopOrLaptop ? <RoadMapMobile /> : <RoadmapSection />}
+      {isDesktop ? <RoadmapSection /> : <RoadMapMobile />}
       <SubscribeNewsLetterSection />
       <Footer />
     </>

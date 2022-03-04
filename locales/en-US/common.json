@@ -1,3 +1,12 @@
 {
-    "greet": "MARKETPLACE"
+    "home": "Home",
+    "game": "Game",
+    "whitepaper": "Whitepaper",
+    "marketplace": "Marketplace",
+    "team": "Team",
+    "roadmap": "Roadmap",
+    "contact": "Contact",
+    "chinese": "Chinese",
+    "english": "English",
+    "hero_title": "ONWARDS TO GLORY"
 }

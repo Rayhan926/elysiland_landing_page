@@ -125,7 +125,7 @@ function RoadMapMobile() {
 
 
     return (
-        <section className="section_py roadmap_section_mobile pb-40">
+        <section className="section_py roadmap_section_mobile pb-40" id="roadmap">
             <h2 className="heading_md text-center">Roadmap</h2>
 
             <div className="w-[95%] mx-auto mt-[50px]">
@@ -207,7 +207,7 @@ function RoadMapMobile() {
                     <li className="w-1/2 ml-auto pl-[30px] relative" >
 
                         {/* Square --Start-- */}
-                        <div className="w-0 h-3.5 bg-white top-0 left-0 -translate-x-1/2 absolute sq_4"></div>
+                        <div className="w-3.5 h-3.5 bg-white top-0 left-0 -translate-x-1/2 absolute sq_4"></div>
                         {/* Square --End-- */}
 
                         {/* Line --Start-- */}

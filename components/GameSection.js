@@ -2,7 +2,7 @@ import Button from "./Button"
 
 function GameSection() {
     return (
-        <section className="section_py">
+        <section className="section_py" id="game">
             <div className="container text-center flex flex-col items-center">
                 <h2 className="heading_sm text_spacing">Game</h2>
                 <p className="paragraph_sm">There are multiple ways for players to engage in gameplay at Elysiland.</p>

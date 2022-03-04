@@ -1,7 +1,7 @@
 function MarketPlaceSection() {
     return (
         <>
-            <section className="section_py my-10 md:my-0">
+            <section className="section_py my-10 md:my-0" id="marketplace">
                 <div className="container text-center flex flex-col items-center">
                     <h2 className="heading_sm text_spacing">MARKETPLACE</h2>
                     <p className="paragraph_sm">Marketplace will be launched along with the start of season 2 game play.</p>
