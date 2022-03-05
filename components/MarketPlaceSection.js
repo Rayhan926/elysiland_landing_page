@@ -4,7 +4,7 @@ function MarketPlaceSection() {
     const { t } = useTranslation()
     return (
         <>
-            <section className="section_py my-10 md:my-0" id="marketplace">
+            <section className="section_py my-5 md:my-0" id="marketplace">
                 <div className="container text-center flex flex-col items-center">
                     <h2 className="heading_sm text_spacing">{t('common:marketplace')}</h2>
                     <p className="paragraph_sm">{t('common:marketplace_subtitle')}</p>

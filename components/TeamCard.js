@@ -4,7 +4,7 @@ import Image from "next/image"
 function TeamCard({ title, subtitle, linkedin, imgSrc, imgAlt }) {
     const { t } = useTranslation()
     return (
-        <a href={linkedin} rel="noreferrer" className="block">
+        <a href={linkedin} rel="noreferrer" className="block border border_soft md:border-none">
             <div className="overflow-hidden group relative">
                 {/* Overly --Start-- */}
                 <div className="absolute top-0 left-0 w-full h-full z-10 bg-black/40 hidden flex-col items-center justify-center opacity-0 group-hover:opacity-100 duration-300 px-6 text-center md:flex">

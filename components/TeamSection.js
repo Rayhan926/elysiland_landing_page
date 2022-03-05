@@ -48,7 +48,7 @@ function TeamSection() {
             <div className="md:px-[9vw] border-r border_soft py-[120px] md:grid md:items-center">
                 <h2 className="heading_md text-center md:text-left" >{t('common:team')}</h2>
             </div>
-            <div className="pt-0 pb-10 md:py-[120px] md:ml-[70px] md:pr-10 team_slider_wrapper" >
+            <div className="pt-0 pb-6 md:py-[120px] md:ml-[70px] md:pr-10 team_slider_wrapper" >
                 <div>
                     <Swiper
                         spaceBetween={35}
@@ -64,7 +64,7 @@ function TeamSection() {
                         breakpoints={{
                             0: {
                                 slidesPerView: 1.25,
-                                spaceBetween: 15
+                                spaceBetween: 12
                             },
                             750: {
                                 slidesPerView: 1.4,
@@ -81,7 +81,7 @@ function TeamSection() {
                     </Swiper>
                 </div>
 
-                <div className="team_slider_pagination flex items-center justify-center mt-8"></div>
+                <div className="team_slider_pagination flex items-center justify-center mt-6 md:mt-8"></div>
             </div>
         </section>
     )

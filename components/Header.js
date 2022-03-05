@@ -17,11 +17,13 @@ function Header() {
         setIsOpenSidebar(false)
         document.documentElement.style.overflow = 'auto'
         document.body.style.right = '0'
+        document.querySelector('#top_header').style.left = 0
     }
     const openSidebar = () => {
         setIsOpenSidebar(true)
 
         document.body.style.right = `${(window.innerWidth / 100) * 80}px`
+        document.querySelector('#top_header').style.left = `-${(window.innerWidth / 100) * 80}px`
         document.documentElement.style.overflow = 'hidden'
     }
 
@@ -59,7 +61,7 @@ function Header() {
     }, [])
 
     return (
-        <header className="bg-dark-blue flex items-center justify-between py-3 md:py-4 px-[18px] md:px-[60px] fixed top-0 left-0 w-full z-50 border-b border_soft" id="top_header" style={{ transition: '0.25s' }}>
+        <header className="bg-dark-blue flex items-center justify-between py-3 md:py-4 px-[18px] md:px-[60px] fixed top-0 left-0 w-full z-50 border-b border_soft" id="top_header" style={{ transition: '0.2s' }}>
             <div className="max-w-[165px] md:max-w-[180px]" >
                 <Link href="/">
                     <a>
@@ -78,11 +80,9 @@ function Header() {
                 </div>
                 {/* Hamburger Icon --End-- */}
 
-                <nav id="mobile_nav_overly" className={`fixed top-0 left-0 w-full h-screen md:h-auto duration-200 ${isOpenSidebar ? "bg-black/90 pointer-events-auto opacity-100" : 'pointer-events-none opacity-0 md:pointer-events-auto md:opacity-100'} md:static md:bg-transparent`} >
-                    <ul className={`flex flex-col md:flex-row w-[90%] md:w-full px-1 bg-dark-blue md:bg-transparent ml-auto md:ml-[unset] h-full md:h-auto ${!isOpenSidebar ? "translate-x-full md:translate-x-0" : 'translate-x-0'} duration-200`}>
-
-
-                        <li className="px-5 py-3 flex items-center justify-between md:hidden mb-[25px] border-b border_soft" >
+                <nav id="mobile_nav_overly" className={`fixed overflow-auto md:overflow-visible top-0 left-0 w-full h-screen md:h-auto duration-200 ${isOpenSidebar ? "bg-black/90 pointer-events-auto opacity-100" : 'pointer-events-none opacity-0 md:pointer-events-auto md:opacity-100'} md:static md:bg-transparent`} >
+                    <ul className={`flex flex-col md:flex-row w-[90%] md:w-full px-1 bg-dark-blue md:bg-transparent ml-auto md:ml-[unset] min-h-full md:h-auto ${!isOpenSidebar ? "translate-x-full md:translate-x-0" : 'translate-x-0'} duration-200`}>
+                        <li className="px-5 py-3 sticky top-0 left-0 w-full z-10 bg-dark-blue flex items-center justify-between md:hidden mb-[25px] border-b border_soft" >
                             <span className="nav_link px-0 py-0 text_shadow_sm" >{t('common:menu')}</span>
                             <span className="text-white" onClick={closeSidebar} >
                                 <IoMdClose size={28} />
@@ -145,11 +145,11 @@ function Header() {
                             </Link>
                         </li>
 
-                        <li>
+                        <li >
                             <LanguageSwitcher />
                         </li>
 
-                        <li className="md:hidden px-5 w-full mt-auto">
+                        <li className="md:hidden px-5 w-full mt-auto pt-12">
                             <ul className="flex items-center gap-3 text-white" >
                                 <li>
                                     <a href="https://twitter.com/elysiland2021" target="_blank" rel="noreferrer">
@@ -176,7 +176,7 @@ function Header() {
                                 </li>
                             </ul>
                         </li>
-                        <li className="px-5 py-10 paragraph_sm md:hidden" >{t('common:only_copy_right')} <Link href="/"><a>Elysiland Limited</a></Link> </li>
+                        <li className="px-5 pt-5 py-10 paragraph_sm md:hidden" >{t('common:only_copy_right')} <Link href="/"><a>Elysiland Limited</a></Link> </li>
                     </ul>
                 </nav>
             </div>

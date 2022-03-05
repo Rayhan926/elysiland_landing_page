@@ -42,7 +42,9 @@ function ScrollAnimationSectionMobile() {
                     <SwiperSlide>
                         <div>
                             <div className="h-[450px] flex items-center justify-center" >
-                                <img src="/img/Soldier-Types-02-crop_1080x.png" className="w-full object-cover h-full" alt="" data-swiper-parallax="-30%" />
+                                <div className="px-4 md:px-0">
+                                    <img src="/img/Soldier-Types-02-crop_1080x.png" className="w-full object-cover h-full" alt="" data-swiper-parallax="-30%" />
+                                </div>
                             </div>
                             <div className="text-center h-[290px] mt-5 flex flex-col justify-center items-center px-[18px]" >
                                 <h3 className="heading_md text_spacing" data-swiper-parallax="-50%">{t('common:soldier_types')}</h3>
@@ -53,7 +55,9 @@ function ScrollAnimationSectionMobile() {
                     <SwiperSlide>
                         <div>
                             <div className="h-[450px] flex items-center justify-center" >
-                                <img src="/img/element-signs-final_02_1860x.png" className="w-full object-cover h-full" alt="" data-swiper-parallax="-30%" />
+                                <div className="px-3 md:px-0">
+                                    <img src="/img/element-signs-final_02_1860x.png" className="w-full object-cover h-full" alt="" data-swiper-parallax="-30%" />
+                                </div>
                             </div>
                             <div className="text-center h-[290px] mt-5 flex flex-col justify-center items-center px-[18px]" >
                                 <h3 className="heading_md text_spacing" data-swiper-parallax="-50%">{t('common:elements')}</h3>
