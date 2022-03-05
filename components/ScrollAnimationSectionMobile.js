@@ -1,3 +1,4 @@
+import useTranslation from "next-translate/useTranslation";
 import { useRef } from "react";
 import SwiperCore, { Navigation, Pagination, Parallax } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -5,6 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 SwiperCore.use([Navigation, Parallax, Pagination]);
 
 function ScrollAnimationSectionMobile() {
+    const { t } = useTranslation()
 
     return (
         <section className="section_py border-t border-b border_soft !pb-0 md:hidden flex flex-col-reverse">
@@ -43,8 +45,8 @@ function ScrollAnimationSectionMobile() {
                                 <img src="/img/Soldier-Types-02-crop_1080x.png" className="w-full object-cover h-full" alt="" data-swiper-parallax="-30%" />
                             </div>
                             <div className="text-center h-[290px] mt-5 flex flex-col justify-center items-center px-[18px]" >
-                                <h3 className="heading_md text_spacing" data-swiper-parallax="-50%">Soldier Types</h3>
-                                <p className="paragraph_sm" data-swiper-parallax="-60%" >Based on different Soldier Types, players can put their decks together in countless combinations.</p>
+                                <h3 className="heading_md text_spacing" data-swiper-parallax="-50%">{t('common:soldier_types')}</h3>
+                                <p className="paragraph_sm" data-swiper-parallax="-60%" >{t('common:soldier_types_subtitle')}</p>
                             </div>
                         </div>
                     </SwiperSlide>
@@ -54,8 +56,8 @@ function ScrollAnimationSectionMobile() {
                                 <img src="/img/element-signs-final_02_1860x.png" className="w-full object-cover h-full" alt="" data-swiper-parallax="-30%" />
                             </div>
                             <div className="text-center h-[290px] mt-5 flex flex-col justify-center items-center px-[18px]" >
-                                <h3 className="heading_md text_spacing" data-swiper-parallax="-50%">Elements</h3>
-                                <p className="paragraph_sm" data-swiper-parallax="-60%" >All Heroes has their respective Element attributes which can be critical when facing specific enemies.</p>
+                                <h3 className="heading_md text_spacing" data-swiper-parallax="-50%">{t('common:elements')}</h3>
+                                <p className="paragraph_sm" data-swiper-parallax="-60%" >{t('common:elements_subtitle')}</p>
                             </div>
                         </div>
                     </SwiperSlide>
@@ -65,8 +67,8 @@ function ScrollAnimationSectionMobile() {
                                 <img src="/img/PVE.jpg" className="w-full object-cover h-full" alt="" data-swiper-parallax="-30%" />
                             </div>
                             <div className="text-center h-[290px] mt-5 flex flex-col justify-center items-center px-[18px]" >
-                                <h3 className="heading_md text_spacing" data-swiper-parallax="-50%">PVE</h3>
-                                <p className="paragraph_sm" data-swiper-parallax="-60%" >Players can train their heroes / decks and explore their decks’ fighting strength. At PVE, heros/ decks can be levelled up for better attributes and chances of dropping various NFTs assets.</p>
+                                <h3 className="heading_md text_spacing" data-swiper-parallax="-50%">{t('common:pve')}</h3>
+                                <p className="paragraph_sm" data-swiper-parallax="-60%" >{t('common:pve_subtitle')}</p>
                             </div>
                         </div>
                     </SwiperSlide>
@@ -76,8 +78,8 @@ function ScrollAnimationSectionMobile() {
                                 <img src="/img/new_dessertcity_final_01.png" className="w-full object-cover h-full" alt="" data-swiper-parallax="-30%" />
                             </div>
                             <div className="text-center h-[290px] mt-5 flex flex-col justify-center items-center px-[18px]" >
-                                <h3 className="heading_md text_spacing" data-swiper-parallax="-50%">PVP</h3>
-                                <p className="paragraph_sm" data-swiper-parallax="-60%" >Players can challenge each other to get to the top of the list for substantial USDC rewards.</p>
+                                <h3 className="heading_md text_spacing" data-swiper-parallax="-50%">{t('common:pvp')}</h3>
+                                <p className="paragraph_sm" data-swiper-parallax="-60%" >{t('common:pvp_subtitle')}</p>
                             </div>
                         </div>
                     </SwiperSlide>

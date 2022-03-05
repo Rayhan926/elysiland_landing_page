@@ -24,7 +24,7 @@ function LanguageSwitcher() {
 
             <ul className={`nav_link px-0 py-0 absolute top-full left-5 md:left-auto md:right-5 bg-dark-blue border border_soft whitespace-nowrap opacity-0 translate-y-5 duration-200 pointer-events-none ${isOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : ''}`} >
                 {router.locales.map(locale => (
-                    <li onClick={() => localeChangeHandler(locale)} className="px-10 py-3.5 cursor-pointer hover:bg-[#1b4a79] border-b border_soft">{locale === 'zh' ? t('common:chinese') : t('common:english')}</li>
+                    <li key={locale} onClick={() => localeChangeHandler(locale)} className="px-10 py-3.5 cursor-pointer hover:bg-[#1b4a79] border-b border_soft">{locale === 'zh' ? t('common:chinese') : t('common:english')}</li>
                 ))}
             </ul>
         </div>

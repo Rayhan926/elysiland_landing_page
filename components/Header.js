@@ -50,6 +50,14 @@ function Header() {
         return () => window.removeEventListener('scroll', trackHeader)
     }, [])
 
+    useEffect(() => {
+        document.addEventListener('click', (e) => {
+            if (e.target.id === 'mobile_nav_overly') {
+                closeSidebar()
+            }
+        })
+    }, [])
+
     return (
         <header className="bg-dark-blue flex items-center justify-between py-3 md:py-4 px-[18px] md:px-[60px] fixed top-0 left-0 w-full z-50 border-b border_soft" id="top_header" style={{ transition: '0.25s' }}>
             <div className="max-w-[165px] md:max-w-[180px]" >
@@ -70,12 +78,12 @@ function Header() {
                 </div>
                 {/* Hamburger Icon --End-- */}
 
-                <nav className={`fixed top-0 left-0 w-full h-screen md:h-auto duration-200 ${isOpenSidebar ? "bg-black/90 pointer-events-auto opacity-100" : 'pointer-events-none opacity-0 md:pointer-events-auto md:opacity-100'} md:static md:bg-transparent`} >
+                <nav id="mobile_nav_overly" className={`fixed top-0 left-0 w-full h-screen md:h-auto duration-200 ${isOpenSidebar ? "bg-black/90 pointer-events-auto opacity-100" : 'pointer-events-none opacity-0 md:pointer-events-auto md:opacity-100'} md:static md:bg-transparent`} >
                     <ul className={`flex flex-col md:flex-row w-[90%] md:w-full px-1 bg-dark-blue md:bg-transparent ml-auto md:ml-[unset] h-full md:h-auto ${!isOpenSidebar ? "translate-x-full md:translate-x-0" : 'translate-x-0'} duration-200`}>
 
 
                         <li className="px-5 py-3 flex items-center justify-between md:hidden mb-[25px] border-b border_soft" >
-                            <span className="nav_link px-0 py-0 text_shadow_sm" >Menu</span>
+                            <span className="nav_link px-0 py-0 text_shadow_sm" >{t('common:menu')}</span>
                             <span className="text-white" onClick={closeSidebar} >
                                 <IoMdClose size={28} />
                             </span>
@@ -168,7 +176,7 @@ function Header() {
                                 </li>
                             </ul>
                         </li>
-                        <li className="px-5 py-10 paragraph_sm md:hidden" >Copyright © 2022 <Link href="/"><a>Elysiland Limited</a></Link> </li>
+                        <li className="px-5 py-10 paragraph_sm md:hidden" >{t('common:only_copy_right')} <Link href="/"><a>Elysiland Limited</a></Link> </li>
                     </ul>
                 </nav>
             </div>

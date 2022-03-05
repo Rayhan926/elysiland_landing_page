@@ -1,50 +1,52 @@
+import useTranslation from 'next-translate/useTranslation';
 import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import TeamCard from './TeamCard';
 
 const teams = [
     {
-        title: 'NICK GU',
+        title: 'team_member_1_name',
         linkedin: 'https://www.linkedin.com/in/nickgulikhang',
-        subtitle: 'CO-FOUNDER, DESIGN LEAD',
+        subtitle: 'team_member_1_subtitle',
         imgSrc: '/img/nick_480x.jpg',
-        imgAlt: 'NICK GU'
+        imgAlt: 'team_member_1_name'
     },
     {
-        title: 'KENNY NGAN',
+        title: 'team_member_2_name',
         linkedin: 'https://www.linkedin.com/in/kennycsngan',
-        subtitle: 'CO-FOUNDER, PRODUCT LEAD',
+        subtitle: 'team_member_2_subtitle',
         imgSrc: '/img/ngan_480x.jpg',
-        imgAlt: 'KENNY NGAN'
+        imgAlt: 'team_member_2_name'
     },
     {
-        title: 'STEVEN FUNG',
+        title: 'team_member_3_name',
         linkedin: 'https://www.linkedin.com/in/fclsteven',
-        subtitle: 'CO-FOUNDER, TECH LEAD',
+        subtitle: 'team_member_3_subtitle',
         imgSrc: '/img/steven_480x.jpg',
-        imgAlt: 'STEVEN FUNG'
+        imgAlt: 'team_member_3_name'
     },
     {
-        title: 'LOK WONG',
+        title: 'team_member_4_name',
         linkedin: 'https://www.linkedin.com/in/lok-wong-620431228',
-        subtitle: 'CO-FOUNDER, TOKENOMICS LEAD',
+        subtitle: 'team_member_4_subtitle',
         imgSrc: '/img/lok_480x.jpg',
-        imgAlt: 'LOK WONG'
+        imgAlt: 'team_member_4_name'
     },
     {
-        title: 'YUKI KATO',
+        title: 'team_member_5_name',
         linkedin: 'https://www.linkedin.com/in/yuki-kato-0337a392',
-        subtitle: 'CO-FOUNDER, MARKETING LEAD',
+        subtitle: 'team_member_5_subtitle',
         imgSrc: '/img/yuki_7a74966f-a3b5-46b3-b949-4d9ab4621bfa_480x.jpg',
-        imgAlt: 'YUKI KATO'
+        imgAlt: 'team_member_5_name'
     },
 ]
 
 function TeamSection() {
+    const { t } = useTranslation()
     return (
         <section className="grid grid-cols-1 md:grid-cols-2 border-t border-b border_soft" id="team">
             <div className="md:px-[9vw] border-r border_soft py-[120px] md:grid md:items-center">
-                <h2 className="heading_md text-center md:text-left" >Team</h2>
+                <h2 className="heading_md text-center md:text-left" >{t('common:team')}</h2>
             </div>
             <div className="pt-0 pb-10 md:py-[120px] md:ml-[70px] md:pr-10 team_slider_wrapper" >
                 <div>

@@ -1,8 +1,10 @@
 import { gsap } from 'gsap';
 import { useEffect, useRef } from 'react';
-
+import useTranslation from "next-translate/useTranslation";
 
 function ScrollAnimationSection() {
+
+    const { t } = useTranslation()
 
     const scroll_animation_section_ref = useRef(null)
 
@@ -60,20 +62,20 @@ function ScrollAnimationSection() {
             {/* Text Box Container --Start-- */}
             <div className="animaton_text_boxs_wrapper" >
                 <div className="px-[9vw] border-r border_soft h-screen flex flex-col justify-center box_1">
-                    <h3 className="heading_md  text_spacing" >Soldier Types</h3>
-                    <p className="paragraph_sm" >Based on different Soldier Types, players can put their decks together in countless combinations.</p>
+                    <h3 className="heading_md  text_spacing" >{t('common:soldier_types')}</h3>
+                    <p className="paragraph_sm" >{t('common:soldier_types_subtitle')}</p>
                 </div>
                 <div className="px-[9vw] border-r border_soft h-screen flex flex-col justify-center box_2">
-                    <h3 className="heading_md  text_spacing" >Elements</h3>
-                    <p className="paragraph_sm" >All Heroes has their respective Element attributes which can be critical when facing specific enemies.</p>
+                    <h3 className="heading_md  text_spacing" >{t('common:elements')}</h3>
+                    <p className="paragraph_sm" >{t('common:elements_subtitle')}</p>
                 </div>
                 <div className="px-[9vw] border-r border_soft h-screen flex flex-col justify-center box_3">
-                    <h3 className="heading_md  text_spacing" >PVE</h3>
-                    <p className="paragraph_sm" >Players can train their heroes / decks and explore their decks’ fighting strength. At PVE, heros/ decks can be levelled up for better attributes and chances of dropping various NFTs assets.</p>
+                    <h3 className="heading_md  text_spacing" >{t('common:pve')}</h3>
+                    <p className="paragraph_sm" >{t('common:pve_subtitle')}</p>
                 </div>
                 <div className="px-[9vw] border-r border_soft h-screen flex flex-col justify-center">
-                    <h3 className="heading_md  text_spacing" >PVP</h3>
-                    <p className="paragraph_sm" >Players can challenge each other to get to the top of the list for substantial USDC rewards.</p>
+                    <h3 className="heading_md  text_spacing" >{t('common:pvp')}</h3>
+                    <p className="paragraph_sm" >{t('common:pvp_subtitle')}</p>
                 </div>
             </div>
             {/* Text Box Container --End-- */}

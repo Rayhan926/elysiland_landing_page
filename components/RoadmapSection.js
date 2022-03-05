@@ -1,7 +1,9 @@
 import { gsap } from 'gsap';
+import useTranslation from 'next-translate/useTranslation';
 import { useEffect } from 'react';
 
 function RoadmapSection() {
+    const { t } = useTranslation()
 
     useEffect(() => {
         const timeline = gsap.timeline()
@@ -124,7 +126,7 @@ function RoadmapSection() {
 
     return (
         <section className="section_py roadmap_section" id="roadmap">
-            <h2 className="heading_md text-center">Roadmap</h2>
+            <h2 className="heading_md text-center">{t('common:roadmap')}</h2>
 
             <div className="md:w-[95%] mx-auto pt-[3%]" >
                 <ol className="relative py-[200px] w-[calc(100%-220px)] mx-auto" >
@@ -144,11 +146,11 @@ function RoadmapSection() {
 
                         {/* Content --Start-- */}
                         <div className="text-center space-y-0.5 absolute top-[80px] w-full scale-0 content_1">
-                            <p className="heading_sm !text-base font-praebrg !font-bold" style={{ textShadow: '2px 2px 0 #c39e53' }}>2022 Q1</p>
-                            <p className="paragraph_sm text-base">launch of</p>
-                            <p className="paragraph_sm text-base">• Whitepaper</p>
-                            <p className="paragraph_sm text-base">• 16 initial character designs</p>
-                            <p className="paragraph_sm text-base">• website</p>
+                            <p className="heading_sm !text-base font-praebrg !font-bold" style={{ textShadow: '2px 2px 0 #c39e53' }}>{t('common:roadmap_box_1_title')}</p>
+                            <p className="paragraph_sm text-base">{t('common:roadmap_box_1_subtitle')}</p>
+                            <p className="paragraph_sm text-base">{t('common:roadmap_box_1_bullet_1')}</p>
+                            <p className="paragraph_sm text-base">{t('common:roadmap_box_1_bullet_2')}</p>
+                            <p className="paragraph_sm text-base">{t('common:roadmap_box_1_bullet_3')}</p>
                         </div>
                         {/* Content --End-- */}
                     </li>
@@ -166,11 +168,11 @@ function RoadmapSection() {
 
                         {/* Content --Start-- */}
                         <div className="text-center space-y-0.5 absolute bottom-[80px] w-full scale-0 content_2">
-                            <p className="heading_sm !text-base font-praebrg !font-bold" style={{ textShadow: '2px 2px 0 #c39e53' }}>2022 Q2</p>
-                            <p className="paragraph_sm text-base">launch of</p>
-                            <p className="paragraph_sm text-base">• Marketing Champaign</p>
-                            <p className="paragraph_sm text-base">• Special NFTs KOL spokespersons</p>
-                            <p className="paragraph_sm text-base">• NFT SALES</p>
+                            <p className="heading_sm !text-base font-praebrg !font-bold" style={{ textShadow: '2px 2px 0 #c39e53' }}>{t('common:roadmap_box_2_title')}</p>
+                            <p className="paragraph_sm text-base">{t('common:roadmap_box_2_subtitle')}</p>
+                            <p className="paragraph_sm text-base">{t('common:roadmap_box_2_bullet_1')}</p>
+                            <p className="paragraph_sm text-base">{t('common:roadmap_box_2_bullet_2')}</p>
+                            <p className="paragraph_sm text-base">{t('common:roadmap_box_2_bullet_3')}</p>
                         </div>
                         {/* Content --End-- */}
                     </li>
@@ -188,11 +190,11 @@ function RoadmapSection() {
 
                         {/* Content --Start-- */}
                         <div className="text-center space-y-0.5 absolute top-[80px] w-full scale-0 content_3">
-                            <p className="heading_sm !text-base font-praebrg !font-bold" style={{ textShadow: '2px 2px 0 #c39e53' }}>2022 Q3</p>
-                            <p className="paragraph_sm text-base">launch of</p>
-                            <p className="paragraph_sm text-base">• Elysi Coin Whitelist</p>
-                            <p className="paragraph_sm text-base">• Elysi COIN IDO</p>
-                            <p className="paragraph_sm text-base">• Gameplay 1.0</p>
+                            <p className="heading_sm !text-base font-praebrg !font-bold" style={{ textShadow: '2px 2px 0 #c39e53' }}>{t('common:roadmap_box_3_title')}</p>
+                            <p className="paragraph_sm text-base">{t('common:roadmap_box_3_subtitle')}</p>
+                            <p className="paragraph_sm text-base">{t('common:roadmap_box_3_bullet_1')}</p>
+                            <p className="paragraph_sm text-base">{t('common:roadmap_box_3_bullet_2')}</p>
+                            <p className="paragraph_sm text-base">{t('common:roadmap_box_3_bullet_3')}</p>
                         </div>
                         {/* Content --End-- */}
                     </li>
@@ -211,10 +213,10 @@ function RoadmapSection() {
 
                         {/* Content --Start-- */}
                         <div className="text-center space-y-0.5 absolute bottom-[80px] w-full scale-0 content_4">
-                            <p className="heading_sm !text-base font-praebrg !font-bold" style={{ textShadow: '2px 2px 0 #c39e53' }}>2022 Q4</p>
-                            <p className="paragraph_sm text-base">launch of</p>
-                            <p className="paragraph_sm text-base">• Gameplay 2.0 - Season 1</p>
-                            <p className="paragraph_sm text-base">• NFT marketplace</p>
+                            <p className="heading_sm !text-base font-praebrg !font-bold" style={{ textShadow: '2px 2px 0 #c39e53' }}>{t('common:roadmap_box_4_title')}</p>
+                            <p className="paragraph_sm text-base">{t('common:roadmap_box_4_subtitle')}</p>
+                            <p className="paragraph_sm text-base">{t('common:roadmap_box_4_bullet_1')}</p>
+                            <p className="paragraph_sm text-base">{t('common:roadmap_box_4_bullet_2')}</p>
                         </div>
                         {/* Content --End-- */}
                     </li>
@@ -233,10 +235,9 @@ function RoadmapSection() {
 
                         {/* Content --Start-- */}
                         <div className="text-center space-y-0.5 absolute top-[80px] w-full scale-0 content_5">
-                            <p className="heading_sm !text-base font-praebrg !font-bold" style={{ textShadow: '2px 2px 0 #c39e53' }}>2023 Q1-Q2
-                            </p>
-                            <p className="paragraph_sm text-base">launch of</p>
-                            <p className="paragraph_sm text-base">•  Gameplay 2.0 - Season 2</p>
+                            <p className="heading_sm !text-base font-praebrg !font-bold" style={{ textShadow: '2px 2px 0 #c39e53' }}>{t('common:roadmap_box_5_title')}</p>
+                            <p className="paragraph_sm text-base">{t('common:roadmap_box_5_subtitle')}</p>
+                            <p className="paragraph_sm text-base">{t('common:roadmap_box_5_bullet_1')}</p>
                         </div>
                         {/* Content --End-- */}
                     </li>
@@ -256,8 +257,8 @@ function RoadmapSection() {
 
                         {/* Content --Start-- */}
                         <div className="text-center space-y-0.5 absolute bottom-[80px] w-full scale-0 content_6">
-                            <p className="heading_sm !text-base font-praebrg !font-bold" style={{ textShadow: '2px 2px 0 #c39e53' }}>2024 Q1-Q2</p>
-                            <p className="paragraph_sm text-base">VR /AR integration Beta</p>
+                            <p className="heading_sm !text-base font-praebrg !font-bold" style={{ textShadow: '2px 2px 0 #c39e53' }}>{t('common:roadmap_box_6_title')}</p>
+                            <p className="paragraph_sm text-base">{t('common:roadmap_box_6_subtitle')}</p>
                         </div>
                         {/* Content --End-- */}
                     </li>
