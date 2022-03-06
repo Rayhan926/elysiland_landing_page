@@ -81,6 +81,10 @@ html {
     .box_shadow_lg {
         box-shadow: 4px 4px #c39e53;
     }
+
+    ._input {
+        @apply h-[54px] text-[26px] font-praebrg border border-white/20 px-5 bg-transparent outline-none text-white placeholder:text-white duration-150 hover:border-white/80 focus:border-white focus:border-[2px];
+    }
 }
 
 .swiper-button-disabled {

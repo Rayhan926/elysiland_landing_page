@@ -18,7 +18,7 @@ function LanguageSwitcher() {
     return (
         <div className="relative select-none" >
             <div className="nav_link flex items-center gap-3 cursor-pointer" onClick={() => setIsOpen(prev => !prev)}>
-                <p>{router.locale === 'zh' ? t('common:chinese') : t('common:english')}</p>
+                <p className="shrink-0 whitespace-nowrap" >{router.locale === 'zh' ? t('common:chinese') : t('common:english')}</p>
                 <GoChevronDown className={`${isOpen ? 'rotate-180' : ''} duration-200`} />
             </div>
 

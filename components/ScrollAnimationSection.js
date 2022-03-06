@@ -83,24 +83,24 @@ function ScrollAnimationSection() {
             {/* Fixed Images Container --Start-- */}
             <div className="h-[calc(100vh-2px)] relative right_images_wrapper" >
                 <div className="absolute top-0 left-0 h-full w-full">
-                    <img src="/img/Soldier-Types-02-crop_1080x.png" className="w-full h-full object-cover" alt="" />
+                    <img src="/img/Soldier-Types-02-crop_1080x.png" className="w-full h-full object-contain" alt="" />
                 </div>
 
                 {/* Img Box 1 --Start-- */}
                 <div className="absolute top-0 left-0 h-0 w-full overflow-hidden img_1 bg-dark-blue">
-                    <img src="/img/element-signs-final_02_1860x.png" className="w-full h-[calc(100vh-2px)] object-cover absolute top-0 left-0" alt="" />
+                    <img src="/img/element-signs-final_02_1860x.png" className="w-full h-[calc(100vh-2px)] object-contain absolute top-0 left-0" alt="" />
                 </div>
                 {/* Img Box 1 --End-- */}
 
                 {/* Img Box 2 --Start-- */}
                 <div className="absolute top-0 left-0 h-0 w-full overflow-hidden img_2 bg-dark-blue">
-                    <img src="/img/PVE.jpg" className="w-full h-[calc(100vh-2px)] object-cover absolute top-0 left-0" alt="" />
+                    <img src="/img/PVE.jpg" className="w-full h-[calc(100vh-2px)] object-contain absolute top-0 left-0" alt="" />
                 </div>
                 {/* Img Box 2 --End-- */}
 
                 {/* Img Box 3 --Start-- */}
                 <div className="absolute top-0 left-0 h-0 w-full overflow-hidden img_3 bg-dark-blue">
-                    <img src="/img/new_dessertcity_final_01.png" className="w-full h-[calc(100vh-2px)] object-cover absolute top-0 left-0" alt="" />
+                    <img src="/img/new_dessertcity_final_01.png" className="w-full h-[calc(100vh-2px)] object-contain absolute top-0 left-0" alt="" />
                 </div>
                 {/* Img Box 3 --End-- */}
 

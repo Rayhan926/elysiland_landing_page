@@ -7,7 +7,7 @@
     "roadmap": "發展路線圖",
     "contact": "聯繫我們",
     "contact_us": "聯繫我們",
-    "chinese": "中國人",
+    "chinese": "中文",
     "english": "英語",
     "hero_title": "走向榮耀",
     "learn_more": "了解更多",
@@ -87,5 +87,9 @@
     "only_copy_right": "版權所有 © 2022",
     "copy_right": "版權所有 © 2022 Elysiland Limited",
     "footer_address": "香港九龍尖沙咀科學館道14號新文華中心A座9樓9室",
-    "menu": "菜單"
+    "menu": "菜單",
+    "leave_us_a_message": "給我們留言",
+    "name": "姓名",
+    "message": "留言",
+    "send": "發送"
 }

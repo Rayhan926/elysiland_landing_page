@@ -87,5 +87,9 @@
     "only_copy_right": "Copyright © 2022 ",
     "copy_right": "Copyright © 2022 Elysiland Limited ",
     "footer_address": "Unit 9, 9/F, Tower A, New Mandarin Plaza, No. 14 Science Museum Road, Tsim Sha Tsui, Kowloon, Hong Kong",
-    "menu": "Menu"
+    "menu": "Menu",
+    "leave_us_a_message": "Leave us a message",
+    "name": "Name",
+    "message": "Message",
+    "send": "Send"
 }
