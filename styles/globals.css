@@ -97,3 +97,37 @@ html {
         overflow: auto !important;
     }
 }
+
+.show_sticky_header {
+    position: fixed !important;
+    transform: translateY(0);
+    animation: from_full_to_zero 0.2s ease-in;
+    margin-top: 0 !important;
+    /* transition: transform 0.2s linear; */
+}
+
+@keyframes from_full_to_zero {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.hide_sticky_header {
+    position: fixed !important;
+    transform: translateY(-100%);
+    /* animation: from_zero_to_full 0.2s ease-in; */
+    margin-top: 0 !important;
+    transition: transform 0.2s linear;
+}
+
+@keyframes from_zero_to_full {
+    0% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}

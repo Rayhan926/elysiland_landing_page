@@ -17,6 +17,7 @@ import RoadMapMobile from "../components/RoadMapMobile";
 import { useMediaQuery } from 'react-responsive'
 import Head from "next/head";
 import { useEffect, useState } from "react";
+import AnnouncementBar from "../components/AnnouncementBar";
 
 // function Home() {
 //   const router = useRouter()
@@ -69,16 +70,19 @@ function Home() {
       <Head>
         <title>Elysiland Limited</title>
       </Head>
-      <Header />
-      <HeroSection />
-      <NftSection />
-      <GameSection />
-      {isDesktop ? <ScrollAnimationSection /> : <ScrollAnimationSectionMobile />}
-      <MarketPlaceSection />
-      <TeamSection />
-      {isDesktop ? <RoadmapSection /> : <RoadMapMobile />}
-      <SubscribeNewsLetterSection />
-      <Footer />
+      <div className="relative" >
+        <AnnouncementBar />
+        <Header />
+        <HeroSection />
+        <NftSection />
+        <GameSection />
+        {isDesktop ? <ScrollAnimationSection /> : <ScrollAnimationSectionMobile />}
+        <MarketPlaceSection />
+        <TeamSection />
+        {isDesktop ? <RoadmapSection /> : <RoadMapMobile />}
+        <SubscribeNewsLetterSection />
+        <Footer />
+      </div>
     </>
   )
 }

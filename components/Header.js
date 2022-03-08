@@ -6,6 +6,7 @@ import { BsTwitter } from "react-icons/bs";
 import { IoMdClose } from 'react-icons/io';
 import LanguageSwitcher from "./LanguageSwitcher";
 import useTranslation from 'next-translate/useTranslation'
+import { gsap } from "gsap";
 
 function Header() {
 
@@ -31,18 +32,34 @@ function Header() {
 
     useEffect(() => {
 
+        const announcement_bar = document.querySelector('#announcement_bar')
+
         if (typeof window !== 'undefined') {
             document.body.style.position = 'relative'
             document.body.style.transition = '0.2s'
         }
 
         let prevScrollTop = 0
+        let hasReverseScroll = false;
         const trackHeader = () => {
             const currentScrollTop = document.documentElement.scrollTop;
-            if (currentScrollTop > prevScrollTop) {
-                document.querySelector('#top_header').style.transform = 'translateY(-100%)'
-            } else {
-                document.querySelector('#top_header').style.transform = 'unset'
+            const topHeader = document.querySelector('#top_header')
+
+            if (currentScrollTop < 20) {
+                hasReverseScroll = false
+            }
+
+            if (currentScrollTop < prevScrollTop) {
+                hasReverseScroll = true
+            }
+
+            if (currentScrollTop < prevScrollTop && document.documentElement.scrollTop > 20) {
+                topHeader.classList.remove('hide_sticky_header')
+                topHeader.classList.add('show_sticky_header')
+            }
+            else if (currentScrollTop > prevScrollTop && document.documentElement.scrollTop > 150 && hasReverseScroll) {
+                topHeader.classList.remove('show_sticky_header')
+                topHeader.classList.add('hide_sticky_header')
             }
             prevScrollTop = currentScrollTop
         }
@@ -63,7 +80,7 @@ function Header() {
     }, [])
 
     return (
-        <header className="bg-dark-blue flex items-center justify-between py-3 lg:py-4 px-[18px] lg:px-[60px] fixed top-0 left-0 w-full z-50 border-b border_soft" id="top_header" style={{ transition: '0.2s' }}>
+        <header className="bg-dark-blue flex items-center justify-between py-3 lg:py-4 px-[18px] lg:px-[60px] absolute top-0 left-0 w-full z-50 border-b border_soft" id="top_header">
             <div className="max-w-[165px] lg:max-w-[180px] shrink-0" >
                 <Link href="/">
                     <a>
